@@ -308,7 +308,7 @@ section.
   ----------------------------------------------------------------------------
   let g:airline_section_a       (mode, crypt, paste, spell, iminsert)
   let g:airline_section_b       (hunks, branch)
-  let g:airline_section_c       (bufferline or filename)
+  let g:airline_section_c       (bufferline or wintabs or filename)
   let g:airline_section_gutter  (readonly, csv)
   let g:airline_section_x       (tagbar, filetype, virtualenv)
   let g:airline_section_y       (fileencoding, fileformat)
@@ -398,8 +398,17 @@ vim-bufferline <https://github.com/bling/vim-bufferline>
 * enable/disable bufferline integration >
   let g:airline#extensions#bufferline#enabled = 1
 <
-* determine whether bufferline will overwrite customization variables >
+* determine whether airline will overwrite customization variables >
   let g:airline#extensions#bufferline#overwrite_variables = 1
+<
+-------------------------------------                   *airline-wintabs*
+vim-wintabs <https://github.com/zefei/vim-wintabs>
+
+* enable/disable wintabs integration >
+  let g:airline#extensions#wintabs#enabled = 1
+<
+* determine whether airline will overwrite customization variables >
+  let g:airline#extensions#wintabs#overwrite_variables = 1
 <
 -------------------------------------                       *airline-branch*
 
@@ -801,7 +810,7 @@ Note: Enabling this extension will modify 'showtabline' and 'guioptions'.
    won't update airline on |:badd| commands) >
   let airline#extensions#tabline#disable_refresh = 0
 
-* preserve windows when closing a buffer from the bufferline (default: 0) >
+* preserve windows when closing a buffer from the tabline (default: 0) >
 
   let airline#extensions#tabline#middle_click_preserves_windows = 1
 <
